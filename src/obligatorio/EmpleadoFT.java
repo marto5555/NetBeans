@@ -43,15 +43,15 @@ public class EmpleadoFT extends Empleados implements ICantante{
         float salario=0;
         
         if(getTipoEmpleado().equals("Vendedor")){
-            salario=180000;
+            salario=18000;
         }else if(getTipoEmpleado().equals("Encargado")){
             salario=23000;
         }
-        if(ventasMes>=10000){
+        if(ventasMes>=10000 && ventasMes < 15000){
             salario+=1000;
         }
         else if(ventasMes>=15000){
-            salario+=salario+2000;
+            salario+=2000;
         }
         salario+=horasExtras*300;
         
@@ -59,12 +59,12 @@ public class EmpleadoFT extends Empleados implements ICantante{
     }
     
     public float calcularSalarioNeto(float salarioBruto){
-        if(salarioBruto>18000 && salarioBruto<23000){
+        if(salarioBruto>=18000 && salarioBruto<23000){
         salarioBruto+=salarioBruto*0.16;
-    }else if(salarioBruto>23000){
-        salarioBruto+=salarioBruto*0.18;
-        
-    }
+        }else if(salarioBruto>23000){
+            salarioBruto+=salarioBruto*0.18;
+
+        }
         return salarioBruto;
     }
    

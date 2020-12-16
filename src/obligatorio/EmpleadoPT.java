@@ -8,7 +8,7 @@ public class EmpleadoPT extends Empleados{
     private String nombreInstitucion;
     
     public EmpleadoPT(String nombre, int cedula, int numeroEmpleado, Date fechaContrato, float cantHoras, String nombreInstitucion){
-        super(nombre, cedula, numeroEmpleado, fechaContrato );
+        super(nombre, cedula, numeroEmpleado, fechaContrato);
         this.cantHoras=cantHoras;
         this.nombreInstitucion=nombreInstitucion;
     }
